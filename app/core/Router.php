@@ -36,7 +36,7 @@ class Router {
     private function executeCallback($callback, $params = []) {
         if(is_string($callback)) {
             $parts = explode('@', $callback);
-            $controller = "app\\controllers\\" . $parts[0];
+            $controller = "App\\Controllers\\" . $parts[0];
             $method = $parts[1];
             
             if(class_exists($controller)) {
